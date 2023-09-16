@@ -72,14 +72,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 	@CachePut(cacheNames = "employees" , key = "#employee.id")
 	public Employee updateEmployee(Employee employee, long id) {
 		//we need to check whether employee	given id is exist in DB or not
-//		Optional<Employee>  = employeeRepository.findById(id);
-//		if (employee1.isPresent()) {
-//		employee.setFirstName(null);;	 
-//			
-//		}else {
-//			throw new ResorceNotFoundException("Employee", "Id", id);
-//			
-//		}
+
 		//lambdha function used below
 //		
 		Employee existingEmployee = employeeRepository.findById(id).orElseThrow(
